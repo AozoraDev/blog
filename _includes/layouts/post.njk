@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+---
+{%- css %}{% include "public/css/post.style.css" %}{% endcss %}
+{%- css %}
+.post-header {
+    background-image: url("{{ banner }}");
+}
+{% endcss %}
+
+<div class="post-header">
+    <div class="container-custom">
+        <h1 class="lh-1">{{ title }}</h1>
+        <span class="d-flex justify-content-center small"><i class="pe-1 bx bx-calendar"></i>{{ date | getHumanDate }}</span>
+    </div>
+</div>
+<div class="post-content container-custom pt-2 pb-2">
+    {{ content | safe }}
+</div>

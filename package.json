@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Aozora's Blog",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "watch": "npx @11ty/eleventy --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AozoraDev/blog.git"
+  },
+  "author": "AozoraDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AozoraDev/blog/issues"
+  },
+  "homepage": "https://blog.aozora.my.id",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-bundle": "^1.0.4",
+    "luxon": "^3.4.3"
+  }
+}

@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+---
+<div class="container-md mt-2">
+    <h2 class="latest m-0"><i class="bx bx-news"></i> Latest Posts</h2>
+    <hr />
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 gy-3 g-sm-3 pb-3">
+        {% set posts = collections.post %}
+        {% for post in posts | reverse %}
+        <div class="col">
+            <a href="post/{{ post.fileSlug }}">
+                <div class="boxx-header">
+                    <i class="me-1 bx bx-calendar"></i>
+                    <small>{{ post.date | getHumanDate }}</small>
+                </div>
+                <div class="boxx">
+                    <img src="post/{{ post.fileSlug }}/{{ post.data.banner }}" alt="{{ post.data.title }}" />
+                    <span class="p-2 lh-1">{{ post.data.title }}</span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
