@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
 ---
-<div class="container-md mt-2">
+<div class="container-custom mt-2">
     <h2 class="latest m-0"><i class="bx bx-news"></i> Latest Posts</h2>
     <hr />
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 gy-3 g-sm-3 pb-3">
+    <div class="row row-cols-1 gy-3 pb-3">
         {% set posts = collections.post %}
         {% for post in posts | reverse %}
         <div class="col">
